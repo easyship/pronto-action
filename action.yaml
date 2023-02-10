@@ -1,31 +1,31 @@
-name: 'Pronto Action'
-description: 'Github action of Pronto'
-author: 'HeRoMo'
+name: "Pronto Action"
+description: "Github action of Pronto"
+author: "HeRoMo/Mac Chiang"
 branding:
-  icon: 'code'
-  color: 'blue'
+  icon: "code"
+  color: "blue"
 inputs:
   github_token:
-    description: 'GITHUB_TOKEN.'
+    description: "GITHUB_TOKEN."
     required: false
     default: ${{ github.token }}
   commit:
-    description: 'Commit for the diff.'
+    description: "Commit for the diff."
     required: false
-    default: 'origin/${{ github.base_ref }}'
+    default: "origin/${{ github.base_ref }}"
   runner:
-    description: 'Run only the passed runners.'
+    description: "Run only the passed runners."
     required: false
-    default: 'rubocop'
+    default: "standardrb brakeman"
   formatters:
-    description: 'Pick output formatters.'
+    description: "Pick output formatters."
     required: false
-    default: 'github_status github_pr'
+    default: "github_status github_pr_review"
   path:
-    description: 'Relative path to check'
+    description: "Relative path to check"
     required: false
-    default: '.'
+    default: "."
 runs:
-  using: 'docker'
-  image: docker://ghcr.io/heromo/pronto-action:1.44.0
-  entrypoint: '/pronto/entrypoint.sh'
+  using: "docker"
+  image: docker://ghcr.io/easyship/pronto-action:v3
+  entrypoint: "/pronto/entrypoint.sh"
