@@ -1,23 +1,23 @@
 version: 2
 updates:
-- package-ecosystem: bundler
-  directory: "/"
-  target-branch: develop
-  schedule:
-    interval: weekly
-    day: saturday
-    time: "05:00"
-    timezone: "Asia/Tokyo"
-  assignees:
-    - HeRoMo
-  open-pull-requests-limit: 10
-- package-ecosystem: github-actions
-  directory: "/"
-  schedule:
-    interval: weekly
-    day: saturday
-    time: "05:00"
-    timezone: "Asia/Tokyo"
-  assignees:
-    - HeRoMo
-  open-pull-requests-limit: 20
+  - package-ecosystem: bundler
+    directory: "/"
+    target-branch: develop
+    schedule:
+      interval: weekly
+      day: saturday
+      time: "05:00"
+      timezone: "Asia/Taipei"
+    assignees:
+      - macchiang
+    open-pull-requests-limit: 10
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: saturday
+      time: "05:00"
+      timezone: "Asia/Taipei"
+    assignees:
+      - macchiang
+    open-pull-requests-limit: 20
